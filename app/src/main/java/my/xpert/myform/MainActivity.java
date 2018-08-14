@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.menu_exit:
+                System.exit(0);
                 finish();
                 break;
         }
