@@ -8,46 +8,57 @@
     tools:context=".MainActivity">
 
     <EditText
+        android:id="@+id/main_nameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false"
         android:hint="Enter Your Name" />
 
     <EditText
+        android:id="@+id/main_emailEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
         android:hint="Enter Your email" />
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:layout_height="wrap_content">
-
-    <EditText
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:hint="Phone" />
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/main_phoneEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:layout_weight="1"
+            android:hint="Phone" />
+
+        <EditText
+            android:id="@+id/main_cellEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:layout_weight="1"
+            android:hint="Cell Phone" />
+
+    </LinearLayout>
 
     <EditText
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:hint="Cell Phone" />
-
-</LinearLayout>
-
-    <EditText
+        android:id="@+id/main_messageEditText"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:inputType="text"
         android:gravity="top"
         android:hint="Message" />
 
     <Button
+        android:id="@+id/main_buttonPress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:hint="Send" />
+        android:hint="Send"
+        android:onClick="button_press" />
 
 </LinearLayout>
