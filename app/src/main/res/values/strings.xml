@@ -1,3 +1,28 @@
 <resources>
-    <string name="app_name">My Form</string>
+    <string name="app_name">My Form Android</string>
+    <string-array name="occupations">
+        <item>I.T</item>
+        <item>Admin</item>
+        <item>Marketing</item>
+        <item>Sales</item>
+        <item>Procurement</item>
+    </string-array>
+
+    <string-array name="states">
+        <item>Selangor</item>
+        <item>Kuala Lumpur</item>
+        <item>Putrajaya</item>
+        <item>Melaka</item>
+        <item>Negeri Sembilan</item>
+        <item>Johor</item>
+        <item>Kedah</item>
+        <item>Perlis</item>
+        <item>Perak</item>
+        <item>Pahang</item>
+        <item>Terengganu</item>
+        <item>Kelantan</item>
+        <item>Sabah</item>
+        <item>Sarawak</item>
+
+    </string-array>
 </resources>

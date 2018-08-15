@@ -43,6 +43,19 @@
             android:hint="Cell Phone" />
 
     </LinearLayout>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Occupations"
+        android:id="@+id/spinner">
+    </Spinner>
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:completionThreshold="1"
+        android:hint="States"/>
 
     <EditText
         android:id="@+id/main_messageEditText"

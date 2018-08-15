@@ -5,15 +5,21 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText nameEditText, emailEditText, phoneEditText, cellEditText, messageEditText;
+    Spinner spinner;
+    AutoCompleteTextView autoCompleteTextView1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,15 @@ public class MainActivity extends AppCompatActivity {
         phoneEditText = findViewById(R.id.main_phoneEditText);
         cellEditText = findViewById(R.id.main_cellEditText);
         messageEditText = findViewById(R.id.main_messageEditText);
+        spinner = findViewById(R.id.spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(MainActivity.this, R.array.occupations, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+        autoCompleteTextView1 = findViewById(R.id.autoCompleteTextView1);
+        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(MainActivity.this, R.array.states, android.R.layout.simple_list_item_1);
+        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        autoCompleteTextView1.setAdapter(adapter1);
     }
 
     public void button_press(View view) {
@@ -35,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("phone", phoneEditText.getText().toString()    );
         intent.putExtra("cell", cellEditText.getText().toString()   );
         intent.putExtra("message", messageEditText.getText().toString() );
+        String selectedStates = autoCompleteTextView1.getText().toString();
+        String selectedOccupations = (String) (spinner.getSelectedItem());
+        Log.d("debug","Selected state is "+selectedStates);
+        Log.d("debug", "Selected occupation is "+selectedOccupations);
         startActivity(intent);
     }
 
